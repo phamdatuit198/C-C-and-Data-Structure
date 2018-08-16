@@ -1,0 +1,5 @@
+Honda#accord#2016#20000#gas#aaa,bbb,ccc#8#5#aaaaa,bbbbbb,cccccc,dddddd
+Toyota#Camry#2016#30000#gas#eeeee,fffff,ggggg,hhhhhh#4#5#mmmmm,gggggg,hhhhhhh
+Audi#Cabriolet#2016#60000#gas#Sport Utility,Sports car,Sedan#4#5#Heated seats,airbags,satellite radio,leather interior
+Audi#R8Spyder#2016#1290000#gas#Sport Utility,Sports car,Sedan#6#5#Heated seats,airbags,satellite radio,leather interior
+Lamborghini#AVENTADOR#2016#4000000#gas#Sport Utility,Sports car,Sedan#12#5#Heated seats,airbags,satellite radio,leather interior

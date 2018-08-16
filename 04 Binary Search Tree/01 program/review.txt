@@ -1,0 +1,24 @@
+Dat Pham
+Review
+Program 4
+
+I/ Data Structure
+We will create program using binary search trees (BST). BST is a binary tree which the value of each node is larger any nodes of the left, and smaller any nodes of the right
+     1 . Main design
+	We will create table abstract data type using a binary search trees (BST). The, we will implement the insert, retrieve, display, remove all matches by keyword, and remove all function.
+	For each node of binary tree will define concept. In concept will defined such as name, data structure, advantages, disadvantage. We will insert and sort concept by name of concept. Thus, we will get length of name of concept, then if length of name greater than root, we will push right hand of root, and length of name least than root, we will push left hand of root.
+	For each concept, we also push list of advantage and list of disadvantage. We will use Linear Link List for list advantage and disadvantage. For each node of list advantage will defined content of advantage and pointer next.
+ The main design issue is we should be implemented all of these function by recursion. This is really a issue because it’s really hard for searching node at keyword. Moreover, recursion is really hard when you insert new node because you should be done two job together such as sorting and pushing new node. 
+	The special cases of the BST is the root is Null value when you search, or remove by key, remove all.	
+     2.  Advantages and Disadvantages of Binary Search Tree
+a)	Advantages: 
+Because each node had sorted already, The searching node by keyword have orientation. The searching become faster. The average cost of finding just about log2N. Maximum a quantity counting to find node is height of BST 
+b)	Disadvantages:
+A shape of the tree depends upon order of insertion and it can be degenerated
+    3. Other data structure.
+	If we compare with List (LLL, DLL, CLL) or Array of List, hash table. I think with table abstract data type using a binary search trees is better than List with requirements of program 4 because when we push into BST we also sort already. Then, if we need to search for removing, it really easy.
+II/ Efficient and not efficient
+We can insert and sort when we push into binary tree. This is a reason, we can easy for searching or remove node.
+	Because we use many data structure together such as we use linear link list into binary search tree, then I couldn’t control memory.
+	If I have more time I will fix issue memory of linear link list into binary search tree. Moreover, I need to push a string which has space from keyboard. I couldn’t push a long string from keyboard.
+

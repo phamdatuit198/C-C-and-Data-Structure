@@ -1,0 +1,79 @@
+Dat Pham
+CS163
+Review
+Program 2
+	
+I/ Abstract data type
+       There are three ADTs in this program such as Order_list, Queue, Stack ADT
+1)	Order_list: use for represent information about the product in the warehouse. We will use Double Link List for maintain information because DLL is better than LLL when you need to update any product in the list.
+2)	Queue ADT will keep a list of orders. We will use circular linked list 
+3)	Stack ADT will keep a list product of waiting. We will use linked list
+II/ Function of ADTs
+1.	Order_list:
+-	We will be loaded information of product from DataFile (productlist.txt).- 
+-	We have class object as product class. In product class will be had some function:
+
++product(): constructor of product class
++~product():destructor of product class
++addNew(): the function is defined to add information about single product.  The function will be defined boolean types(bool). Therefore return true if we create successful, return false if we can’t add. 
++checkItem(): the function is defined to check name of product. We will check do we have the product in warehouse. Return true if we have, and return false if we don’t have.
++display(): show information about single product
+
+-	We have list of product. This is a listProduct class that has some function:
+
++ productList (): First of all, the class also begin with constructor function. We are going create variable for class and push for them NULL value. 
++ ~ productList (): destructor function is defined to clean variable.
++ display(): show all list of product in warehouse. We will show client about code, name, make from, price, many, content
++ addNew()create new produce, and add to the list of product. We will add to the head position of list. The function will be defined boolean types(bool). Therefore Return true if we create successful, return false if we can’t add. 
++checkItem():the function is defined to check name of product. We will call checkItem() of product class
+2.	Queue ADT 
+-	We have class object as order class. In order class will be had some function:
+
++order(): constructor of order class
++~order():destructor of order class
++addOrder(): the function is defined to add information about single order.  The function will be defined boolean types(bool). Therefore return true if we create successful, return false if we can’t add. 
++display(): show information about single product
+
+-	We have class list for order . listOrder class will be had some function:
+
+ + listOfOrder (): First of all, the class also begin with constructor function. We are going push pointer front and rear null value. 
+ + ~ listOfOrder(): destructor function is defined to clear list. The function clear success when the list cleared and pointer front and rear have null value.
+       + addListOrder() or enqueue(): the function is defined to add information about order into node of the list. The function will be defined boolean types(bool). Therefore, when the function add success, the function return true value. If it is not, return flase value. The function is same with enqueue() in the queue
+       + display(): show information of Order in list. We will show client about codeOrder, codeProduct name, make from, price, many, content
+      + peek(): show information of order on the front queue
+
+3.	Stack ADT has name stackOrderWaiting 
+-	We have class object as orderWaiting class. The orderWaiting class will be had some function:
+
++order(): constructor of order class
++~order():destructor of order class
++addOrderWaiting(): the function is defined to add information about single order.  The function will be defined boolean types(bool). Therefore return true if we create successful, return false if we can’t add. 
++display(): show information about single product
+
+-	We have class list for order waiting. The stackOrderWaiting class will be had some function
++ stackOrderWaiting (): First of all, the class also begin with constructor function. We are going push pointer head and tail null value. 
+ + ~ stackOrderWaiting (): destructor function is defined to clear list. The function clear success when the list cleared and pointer head and tail have null value.
++ addOrderWaiting() or push(): function is defined to add order in the list of order waiting. The function will be defined boolean types(bool). Therefore, when the function add success, the function return true value. If it is not, return false value.
++display(): the function is defined to show information of order in the list of waiting.
++peek(): the function is defined to show information or order waiting on the top
+II/ Data structure
+       We will use Double Link List for list of produce in warehouse, queue implementation using circular linked list for represent order list, and stack implementation using linked list of array for order waiting.
+       First of all, Double Linked List for produce, so each node is defined information produce and pointer next.
+	+ We only use only head pointer for display and add into DLL. 
++ Special case is that head doesn’t exist (!head)
++ Another special case is that head is NULL value
+       Second, CLL for order of customer, so each node is defined information order and pointer next.
+	+ We only use only rear pointer for display and add into CLL. 
++ Variable Topindex is show how many order coming
++ Special case is that rear doesn’t exist (!rear)
++ Another special case is that rear->next is rear value
+       Third, LLL of Array for order waiting, so each node is defined information order waiting and pointer next.
++ We only use only head pointer for display and add into LLL. 
++ Variable Topindex is show how many order waiting
++ Special case is that rear doesn’t exist (!rear)
++ Another special case is that rear->next is rear value
+       The client program should not know anything about the data structures in the system. We don’t have any global variable for client accept to data structures.
+      The main design issue is list of order by queue. We will use array of order for queue because customer can order many product. Moreover, difference customer will be had quantity order difference. For example, A can order 3 product, but B can order 5 product. Quantity order will be changed. Then, we should be controlled quantity order for each customer.
+       Another main design issue is list of order waiting by stack because we must control quantity order waiting for each customer. In fact, quatity order waiting can change for each customer because each customer can have difference quantity order. 
+       I think using DLL for performance produce is better than LLL because  the node of DLL has two pointer such as *next, *pre, we can easy for inserting and sorting member of the list.
+       If I had more time, I will make function update order for customer. Moreover, I can check the quality product in warehouse. If many customer order same product, and warehouse is not enough, I also push stack waiting.
